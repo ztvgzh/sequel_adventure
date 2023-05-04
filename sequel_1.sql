@@ -87,6 +87,6 @@ WHERE last_name REGEXP 'field'  --its equal to LIKE '%field%'
 SELECT *
 FROM Customers
 WHERE last_name REGEXP 'field | mac' --contains 2 words
-                REGEXP 'end$' -- ending
-                REGEXP '^field' -- beginning
+                REGEXP 'end$' -- ending of string 
+                REGEXP '^field' -- beginning of string
 --end
