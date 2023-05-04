@@ -68,3 +68,25 @@ SELECT *
 FROM Customers
 WHERE first_name LIKE '_b%' -- '_' - means 1 symbol, '%' means any number of symbols
 --end
+
+--task in course
+SELECT *
+FROM Customers
+WHERE addresses LIKE '%trail%' 
+    OR addresses LIKE '%avenue%' 
+    AND phone_number LIKE '%9'
+--end
+
+--using REGEXP
+SELECT *
+FROM Customers
+WHERE last_name REGEXP 'field'  --its equal to LIKE '%field%'
+--end
+
+-- | $ ^
+SELECT *
+FROM Customers
+WHERE last_name REGEXP 'field | mac' --contains 2 words
+                REGEXP 'end$' -- ending
+                REGEXP '^field' -- beginning
+--end
