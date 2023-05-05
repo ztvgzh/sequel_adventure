@@ -90,3 +90,15 @@ WHERE last_name REGEXP 'field | mac' --contains 2 words
                 REGEXP 'end$' -- ending of string 
                 REGEXP '^field' -- beginning of string
 --end
+
+-- using IS NULL
+SELECT *
+FROM Customer
+WHERE phone IS NULL
+-- end
+
+-- is not null
+SELECT *
+FROM Customer
+WHERE phone IS NOT NULL
+-- end
