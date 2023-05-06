@@ -102,3 +102,9 @@ SELECT *
 FROM Customer
 WHERE phone IS NOT NULL
 -- end
+
+-- task in course
+SELECT *
+FROM Orders
+WHERE shipped_date IS NULL
+--end
